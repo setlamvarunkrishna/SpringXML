@@ -5,11 +5,23 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="hello" class="com.learning.SpringXmlbased.model.EmployeeModel">
+   <bean id="employee" class="com.learning.SpringXmlbased.model.EmployeeModel">
        <property name="eId" value="101"/>
        <property name="eName" value="Varun Krishna "/>
        <property name="eSalary" value="10000"/>
        <property name="eAge" value="23"/>
+        <property name="adress" ref="address"/>
+   </bean>
+   <!--
+      Below we are using adress bean which is located in another class
+      we configure it by using ref in above bean.
+      -->
+   <bean id="address" class="com.learning.SpringXmlbased.model.AdressModel">
+       <property name="houseNo" value="2223"/>
+       <property name="street" value="V.V Nagar, Dilshuknagar"/>
+       <property name="city" value="Hyderabad"/>
+       <property name="state" value="Telengana"/>
+       <property name="country" value="India"/>
    </bean>
 
 </beans>

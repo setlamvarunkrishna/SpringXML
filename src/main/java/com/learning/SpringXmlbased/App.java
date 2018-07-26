@@ -12,7 +12,7 @@ public class App {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beam.xml");
 		// em and em1 are two ways to create object
-		EmployeeModel em1 = (EmployeeModel) context.getBean("hello");
+		EmployeeModel em1 = (EmployeeModel) context.getBean("employee");
 		EmployeeModel em = context.getBean(EmployeeModel.class);
 		System.out.println(em.geteName());
 		System.out.println(em1.toString());
